@@ -13,7 +13,13 @@ TEXT = "✔"
 reps = 0
 timer= None
 # ---------------------------- TIMER RESET ------------------------------- #
-
+def reset_timer():
+    window.after_cancel(timer)
+    canvas.itemconfig(timer_text, text="00:00")
+    timer_label.config(text="Work")
+    tick.config(text=" ")
+    global reps
+    reps = 0
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 
